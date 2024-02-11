@@ -27,6 +27,16 @@ const TodoList = () => {
       >
         <input className="form-control" type="text" />
         <button>Gönder</button>
+        <button
+          onClick={() =>
+            dispatch({
+              type: "temizle",
+            })
+          }
+          type="button"
+        >
+          Temizle
+        </button>
       </form>
       <ul className="list-group my-5">
         {state.todos.map((todo) => (
