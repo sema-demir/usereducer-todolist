@@ -17,6 +17,8 @@ const TodoList = () => {
       type: "ekle",
       payload: newTodo,
     });
+    //formdaki bütün inputları sıfırlar
+    e.target.reset();
   };
   return (
     <div
