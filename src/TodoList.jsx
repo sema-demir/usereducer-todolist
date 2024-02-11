@@ -19,15 +19,30 @@ const TodoList = () => {
     });
   };
   return (
-    <div>
+    <div
+      style={{ width: "100vw", height: "100vh", padding: "20px" }}
+      className={state.isDarkMode ? "bg-dark text white" : "bg-white text-dark"}
+    >
+      <div className="d-flex justify-content-center py-5 ">
+        <button
+          onClick={() =>
+            dispatch({
+              type: "mod_değiş",
+            })
+          }
+        >
+          Mod Değiştir
+        </button>
+      </div>
       <form
         onSubmit={handleSubmit}
         className="d-flex gap-3 align-items-center"
         action=""
       >
         <input className="form-control" type="text" />
-        <button>Gönder</button>
+        <button className="btn btn-danger">Gönder</button>
         <button
+          className="btn btn-primary"
           onClick={() =>
             dispatch({
               type: "temizle",

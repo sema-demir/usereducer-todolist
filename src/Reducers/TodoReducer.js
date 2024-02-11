@@ -20,11 +20,19 @@ export const reducer = (state, action) => {
         ...state,
         todos: filtred,
       };
+
     case "temizle":
       return {
         ...state,
         todos: [],
       };
+
+    case "mod_değiş":
+      return {
+        ...state,
+        isDarkMode: !state.isDarkMode,
+      };
+
     default:
       return state;
   }
